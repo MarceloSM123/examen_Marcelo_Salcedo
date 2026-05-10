@@ -7,16 +7,11 @@ public class Vendedor {
     private double comisionPorVenta;
     private String tipo;
 
-    
-    public Vendedor(String cedula) {
-        this.cedula = cedula;
-    }
-
-    
-  /*  public Vendedor(String cedula, String tipo) {
+      
+    public Vendedor(String cedula, String tipo) {
         this.cedula = cedula;
         this.tipo = tipo;
-    }*/
+    }
 
     
   /*  public Vendedor(String cedula, int numeroVentas, double sueldoFijo, double comisionPorVenta, String tipo) {

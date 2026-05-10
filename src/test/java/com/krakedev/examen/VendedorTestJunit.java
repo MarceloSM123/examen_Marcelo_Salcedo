@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class VendedorTestJunit {
 	 @Test
 	    public void testCalcularSueldo() {
-	        Vendedor vendedor = new Vendedor("1234567890");
+	        Vendedor vendedor = new Vendedor("1234567890","V");
 	        vendedor.setSueldoFijo(1500.0);
 	        double expected = 1500.0;
 	        double actual = vendedor.calcularSueldo();

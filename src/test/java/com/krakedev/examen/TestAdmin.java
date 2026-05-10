@@ -9,15 +9,15 @@ public class TestAdmin {
 	public static void main(String[] args) {
         AdminVentas admin = new AdminVentas();
         
-        Vendedor v1 = new Vendedor("1111111111");
+        Vendedor v1 = new Vendedor("1111111111","V");
         v1.setNumeroVentas(10);
         v1.setSueldoFijo(1000.0);
         
-        VendedorComision v2 = new VendedorComision("2222222222");
+        VendedorComision v2 = new VendedorComision("2222222222","C");
         v2.setNumeroVentas(15);
         v2.setComisionPorVenta(100.0);
         
-        VendedorMixto v3 = new VendedorMixto("3333333333");
+        VendedorMixto v3 = new VendedorMixto("3333333333","M");
         v3.setNumeroVentas(20);
         v3.setSueldoFijo(1200.0);
         
