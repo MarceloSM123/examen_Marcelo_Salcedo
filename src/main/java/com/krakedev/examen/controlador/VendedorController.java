@@ -6,16 +6,14 @@ import com.krakedev.examen.entidades.VendedorComision;
 import com.krakedev.examen.entidades.VendedorMixto;
 
 import org.springframework.web.bind.annotation.*;
-import org.springframework.http.ResponseEntity;
-import org.springframework.http.HttpStatus;
 
 @RestController
 @RequestMapping("/vendedores")
 public class VendedorController {
-    
-private AdminVentas adminVentas = new AdminVentas();
-@PostMapping("/agregar")
-public ResponseEntity<String> agregarVendedor(@RequestBody Vendedor vendedor) {
+	private final AdminVentas adminVentas = new AdminVentas();
+
+@PostMapping
+public void agregarVendedor(@RequestBody Vendedor vendedor) {
     String tipo = vendedor.getTipo();
     Vendedor nuevoVendedor = null;
     
@@ -35,12 +33,10 @@ public ResponseEntity<String> agregarVendedor(@RequestBody Vendedor vendedor) {
     }
     
     adminVentas.agregar(nuevoVendedor);
-    return ResponseEntity.status(HttpStatus.CREATED).body("Vendedor agregado exitosamente");
 }
 
-@GetMapping("/calcularSueldo/{cedula}")
-public ResponseEntity<Double> calcularSueldoVendedor(@PathVariable String cedula) {
-    Double sueldo = adminVentas.calcularSueldo(cedula);
-    return ResponseEntity.ok(sueldo);
+@GetMapping("/{cedula}/sueldo")
+public Double calcularSueldoVendedor(@PathVariable String cedula) {
+    return adminVentas.calcularSueldo(cedula);
 }
 }
