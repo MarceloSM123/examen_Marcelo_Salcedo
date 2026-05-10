@@ -13,19 +13,19 @@ public class Vendedor {
     }
 
     
-    public Vendedor(String cedula, String tipo) {
+  /*  public Vendedor(String cedula, String tipo) {
         this.cedula = cedula;
         this.tipo = tipo;
-    }
+    }*/
 
     
-    public Vendedor(String cedula, int numeroVentas, double sueldoFijo, double comisionPorVenta, String tipo) {
+  /*  public Vendedor(String cedula, int numeroVentas, double sueldoFijo, double comisionPorVenta, String tipo) {
         this.cedula = cedula;
         this.numeroVentas = numeroVentas;
         this.sueldoFijo = sueldoFijo;
         this.comisionPorVenta = comisionPorVenta;
         this.tipo = tipo;
-    }
+    }*/
 
     
     public String getCedula() {
